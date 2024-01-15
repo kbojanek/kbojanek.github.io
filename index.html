@@ -8,17 +8,30 @@
 </head>
 <body>
     <header>
-        <h1>We are going to get married april/may 2025!!</h1>
+        <h1>We are getting married May 2025!!</h1>
     </header>
     <nav>
         <ul>
             <li><a href="#details">Details</a></li>
             <li><a href="#rsvp">RSVP</a></li>
             <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#story">gabbagool</a></li>
+            <li><a href="#gabbagool">gabbagool</a></li>
         </ul>
     </nav>
     <main>
+
+        <section id="guestbook">
+            <h2>Guestbook</h2>
+            <form id="guestbook-form">
+                <input type="text" id="guest-name" placeholder="Your Name" required>
+                <textarea id="guest-message" placeholder="Your Message" required></textarea>
+                <button type="submit">Sign Guestbook</button>
+            </form>
+            <div id="guestbook-entries">
+                <!-- Guestbook entries will appear here -->
+            </div>
+        </section>
+
         <section id="details">
             <!-- Wedding details go here -->
         </section>
@@ -28,11 +41,12 @@
         <section id="gallery">
             <!-- Gallery images -->
         </section>
-        <section id="story">
+        <section id="gabbagool">
             <!-- Story of the couple -->
         </section>
     </main>
     <footer>
+        <img src="counter.gif" alt="Counter" id="page-counter"> <!-- Placeholder for counter -->
         <p>gabbagool!</p>
     </footer>
     <script src="script.js"></script>

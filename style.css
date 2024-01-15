@@ -1,27 +1,32 @@
 /* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
 body {
     font-family: 'Courier New', monospace;
-    background-color: #f0e4d7;
-    color: #333333;
+    background-color: #e0f7fa;
+    color: #3c3b3d;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #ffcc99;
+    background-color: #a5d6a7;
     text-align: center;
     padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
+    color: #5c6bc0;
 }
 
 nav {
-    background-color: #cccccc;
+    background-color: #fff59d;
     padding: 10px 0;
     text-align: center;
+    border-bottom: 3px solid #ffccbc;
 }
 
 nav ul {
@@ -37,8 +42,13 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: #333333;
+    color: #3c3b3d;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00897b; /* Deep teal for hover effect */
 }
 
 main {
@@ -50,12 +60,68 @@ section {
 }
 
 footer {
-    background-color: #ffcc99;
+    background-color: #ffccbc;
     text-align: center;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#guestbook {
+    background-color: #fff7e6;
+    padding: 15px;
+    border: 2px dashed #ffab91;
+    margin-top: 20px;
+}
+
+#guestbook h2 {
+    color: #ff7043;
+}
+
+#guestbook form {
+    margin-bottom: 20px;
+}
+
+#guestbook input, #guestbook textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+#guestbook button {
+    background-color: #26a69a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#guestbook button:hover {
+    background-color: #00796b;
+}
+
+#guestbook-entries {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
 }
 
 /* Responsive design for mobile devices */
@@ -65,3 +131,6 @@ footer {
         margin-bottom: 10px;
     }
 }
+
+
+
