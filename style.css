@@ -34,3 +34,20 @@
   padding: 20px;
 }
 
+/* Add these styles to your existing CSS */
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+input[type="password"] {
+    margin: 10px 0;
+    padding: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #D2E2CF;
+    border: none;
+    cursor: pointer;
+}
