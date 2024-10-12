@@ -1,79 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
-    <link rel="stylesheet" href="style.css"> 
-
-    <title>Our Wedding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Sophie and Kyle's Wedding</title>
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
-            background-color: #ffeaee; /* pink*/
-            color: #19386b; /* blue*/
+            background-color: #fffff7;
+            color: #5A5C55;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            line-height: 1.6;
         }
-        a {
-            color: #8B008B; 
+        .container {
+            display: flex;
+            min-height: 100vh;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .sidebar {
+            flex: 0 0 200px;
+            background-color: #E2E8D6;
+            padding: 30px 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
-        td, th {
-            border: 1px solid #999;
-            padding: 8px;
-            text-align: left;
-            background-color: #D2E2CF; /* green*/
+        .sidebar h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.5em;
         }
-        .center {
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            margin: 10px 0;
+            color: #5A5C55;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #CBD0C0;
+            border-radius: 4px;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
             text-align: center;
+            margin-bottom: 30px;
         }
-        input[type="text"], select, textarea {
-            background-color: #FFFFFF; /*yellow*/
-            border: 1px solid #999;
-            padding: 8px;
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .faq-section {
+            flex: 2;
+            padding-right: 40px;
+        }
+        .faq-item {
+            margin-bottom: 30px;
+        }
+        .faq-item h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #4A4C45;
+        }
+        .faq-item p {
+            margin: 5px 0;
+        }
+        .photo-column {
+            flex: 1;
+        }
+        .photo-column img {
             width: 100%;
-        }
-        .guestbook-form, .faq-form {
-            width: 100%;
-            margin-top: 20px;
-        }
-        .guestbook-form textarea, .faq-form textarea {
-            height: 100px;
-            margin-top: 10px;
-        }
-        .gallery img {
-            width: 100px;
-            height: 100px;
-            margin: 10px;
-            border: 1px solid #999;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
-
 </head>
-
-<div class="container">
-  <div class="sidebar">
-    <h2>Navigation</h2>
-    <a href="index.html">Home</a> <!-- Make sure the link points to your homepage -->
-    <a href="faq.html">FAQ</a>
-    <a href="guestbook.html">Guestbook</a>
-    <a href="gallery.html">Photo Gallery</a>
-</div>
-
-<div class="content">
-
-
-<h2>FAQ</h2>
-<p>beep beep</p>
-<ul>
-    <li><strong>question?</strong> answer.</li>
-    <li><strong>question?</strong> answer.</li>
-</ul>
-</div>
-
-
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Navigation</h2>
+            <a href="index.html">Home</a>
+            <a href="lodging.html">Lodging</a>
+            <a href="faq.html">FAQ</a>
+            <a href="registry.html">Registry</a>
+            <a href="rsvp.html">RSVP</a>
+            <a href="gallery.html">Photo Gallery</a>
+        </div>
+        <div class="content">
+            <div class="header">
+                <h1>Frequently Asked Questions</h1>
+                <p>Find answers to common questions about Sophie and Kyle's wedding celebration.</p>
+            </div>
+            <div class="main-content">
+                <div class="faq-section">
+                    <div class="faq-item">
+                        <h3>What's the dress code for the wedding?</h3>
+                        <p>[Your answer here, e.g., "The dress code is semi-formal. We recommend suits or cocktail dresses."]</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Are kids welcome at the wedding?</h3>
+                        <p>[Your answer here, e.g., "We love your little ones, but this is an adults-only celebration."]</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I bring a plus-one?</h3>
+                        <p>[Your answer here, e.g., "Due to venue restrictions, we can only accommodate those guests named on the invitation."]</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What time should I arrive at the ceremony?</h3>
+                        <p>[Your answer here, e.g., "Please plan to arrive 30 minutes before the ceremony start time to allow for seating."]</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Is there parking available at the venue?</h3>
+                        <p>[Your answer here, e.g., "Yes, there is ample free parking available at both the ceremony and reception venues."]</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do you have a registry?</h3>
+                        <p>[Your answer here, e.g., "We've registered at [Store Name] and [Store Name]. Links can be found on our wedding website."]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

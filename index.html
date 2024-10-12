@@ -1,116 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> 
-
-    <title>Our Wedding</title>
+    <title>Sophie and Kyle's Wedding</title>
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
-            background-color: #ffeaee; /* pink*/
-            color: #19386b; /* blue*/
+            background-color: #fffff7;
+            color: #3e3e3e;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            line-height: 1.6;
         }
-        a {
-            color: #8B008B; 
+        .container {
+            display: flex;
+            min-height: 100vh;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .sidebar {
+            flex: 0 0 200px;
+            background-color: #E2E8D6;
+            padding: 30px 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
-        td, th {
-            border: 1px solid #999;
-            padding: 8px;
-            text-align: left;
-            background-color: #FFFFFF; /* green*/
+        .sidebar h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.5em;
         }
-        .center {
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            margin: 10px 0;
+            color: #3e3e3e;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #CBD0C0;
+            border-radius: 4px;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
             text-align: center;
+            margin-bottom: 30px;
         }
-        input[type="text"], select, textarea {
-            background-color: #FFFFFF; /*yellow*/
-            border: 1px solid #999;
-            padding: 8px;
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .event-details {
+            flex: 1;
+            padding-right: 40px;
+        }
+        .event-section {
+            margin-bottom: 30px;
+        }
+        .event-section h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #CBD0C0;
+            padding-bottom: 5px;
+        }
+        .event-section p {
+            margin: 5px 0;
+        }
+        .photo-column {
+            flex: .5;
+        }
+        .photo-column img {
             width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .guestbook-form, .faq-form {
-            width: 100%;
-            margin-top: 20px;
-        }
-        .guestbook-form textarea, .faq-form textarea {
-            height: 100px;
-            margin-top: 10px;
-        }
-        .gallery img {
-            width: 100px;
-            height: 100px;
-            margin: 10px;
-            border: 1px solid #999;
-        }
-    </style>
 
+    </style>
 </head>
 <body>
-
-<div class="container">
-  <div class="sidebar">
-    <h2>Navigation</h2>
-    <a href="index.html">Home</a> <!-- Make sure the link points to your homepage -->
-    <a href="faq.html">FAQ</a>
-    <a href="guestbook.html">Guestbook</a>
-    <a href="gallery.html">Photo Gallery</a>
-</div>
-
-<div class="content">
-<h1 class="center">Sophie and Kyle's Wedding!</h1>
-
-<p>Hello, we are excited to celebrate with you! Here is all the information you'll need, in addition to some other odds and ends.</p>
-
-<h2>Event Details</h2>
-<table>
-    <tr>
-        <th>Event</th>
-        <th>Date</th>
-        <th>Time</th>
-        <th>Location</th>
-    </tr>
-    <tr>
-        <td>Wedding Ceremony</td>
-        <td>May 10, 2025</td>
-        <td>4:00 PM</td>
-        <td>church</td>
-    </tr>
-    <tr>
-        <td>Reception</td>
-        <td>May 10, 2025</td>
-        <td>6:00 PM</td>
-        <td>place</td>
-    </tr>
-</table>
-
-
-<h2>RSVP</h2>
-<p>Please let us know if you can make it by date.</p>
-<form class="guestbook-form">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name"><br><br>
-    <label for="attending">Attending:</label>
-    <select name="attending" id="attending">
-        <option value="yes">Yes, I'll be there</option>
-        <option value="no">I can't make it.</option>
-    </select><br><br>
-    <input type="submit" value="Submit">
-</form>
-
-
-
-
-
-
-</div>
-</div>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Navigation</h2>
+            <a href="index.html">Home</a>
+            <a href="lodging.html">Lodging</a>
+            <a href="faq.html">FAQ</a>
+            <a href="registry.html">Registry</a>
+            <a href="rsvp.html">RSVP</a>
+            <a href="gallery.html">Photo Gallery</a>
+        </div>
+        <div class="content">
+            <div class="header">
+                <h1>Sophie and Kyle's Wedding!</h1>
+                <p>We are excited to celebrate with you! Here is all the information you'll need about the wedding.</p>
+            </div>
+            <div class="main-content">
+                <div class="event-details">
+                    <div class="event-section">
+                        <h3>Arrival Party</h3>
+                        <p><strong>Founders Landing Park House</strong> </p>
+                        <p>1025 Terry Ln, Southold, NY, 11971</p>
+                        <p>Friday, May 9, 2025</p>
+                        <p>5:30pm–8:30pm</p>
+                        <p>There will be heavy hors d'ouevres </p>
+                    </div>
+                    <div class="event-section">
+                        <h3>Wedding Ceremony</h3>
+                        <p><strong>St. Agnes Church</strong></p>
+                        <p>523 Front St, Greenport, NY, 11944</p>
+                        <p>Saturday, May 10, 2025</p>
+                        <p>1:30pm</p>
+                    </div>
+                    <div class="event-section">
+                        <h3>Reception</h3>
+                        <p><strong>Noah's</strong></p>
+                        <p>136 Front St, Greenport, NY, 11944</p>
+                        <p>May 10, 2025</p>
+                        <p>6:00pm–10:00pm</p>
+                    </div>
+                </div>
+                <div class="photo-column">
+                    <img src="Wedding.png" alt="Sophie and Kyle">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

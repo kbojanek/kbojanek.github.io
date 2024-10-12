@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lodging Information - Sophie and Kyle's Wedding</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #fffff7;
+            color: #5A5C55;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            flex: 0 0 200px;
+            background-color: #E2E8D6;
+            padding: 30px 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            margin: 10px 0;
+            color: #5A5C55;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #CBD0C0;
+            border-radius: 4px;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .lodging-details {
+            flex: 2;
+            padding-right: 40px;
+        }
+        .lodging-section {
+            margin-bottom: 30px;
+        }
+        .lodging-section h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #CBD0C0;
+            padding-bottom: 5px;
+        }
+        .lodging-section p {
+            margin: 5px 0;
+        }
+        .photo-column {
+            flex: 1;
+        }
+        .photo-column img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Navigation</h2>
+            <a href="index.html">Home</a>
+            <a href="lodging.html">Lodging</a>
+            <a href="faq.html">FAQ</a>
+            <a href="registry.html">Registry</a>
+            <a href="rsvp.html">RSVP</a>
+            <a href="gallery.html">Photo Gallery</a>
+        </div>
+        <div class="content">
+            <div class="header">
+                <h1>Lodging Information</h1>
+                <p>Find comfortable accommodations for your stay during Sophie and Kyle's wedding celebration.</p>
+            </div>
+            <div class="main-content">
+                <div class="lodging-details">
+                    <div class="lodging-section">
+                        <h3>Recommended Hotel</h3>
+                        <p><strong>Name:</strong> [Hotel Name]</p>
+                        <p><strong>Address:</strong> [Hotel Address]</p>
+                        <p><strong>Phone:</strong> [Hotel Phone Number]</p>
+                        <p><strong>Website:</strong> <a href="#">[Hotel Website]</a></p>
+                        <p><strong>Group Rate:</strong> [Rate Information]</p>
+                        <p>To book under our group rate, please mention "Sophie and Kyle's Wedding" when making your reservation.</p>
+                    </div>
+                    <div class="lodging-section">
+                        <h3>Alternative Options</h3>
+                        <p>If you prefer alternative accommodations, here are some other options in the area:</p>
+                        <ul>
+                            <li>[Alternative Hotel/B&B Name 1]</li>
+                            <li>[Alternative Hotel/B&B Name 2]</li>
+                            <li>[Alternative Hotel/B&B Name 3]</li>
+                        </ul>
+                    </div>
+                    <div class="lodging-section">
+                        <h3>Transportation</h3>
+                        <p>Information about transportation between the lodging options and wedding venues:</p>
+                        <p>[Add details about shuttles, public transportation, or parking information]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
