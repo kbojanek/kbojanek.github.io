@@ -21,7 +21,6 @@
             flex: 0 0 200px;
             background-color: #E2E8D6;
             padding: 30px 20px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
         .sidebar h2 {
             margin-top: 0;
@@ -38,11 +37,13 @@
         }
         .sidebar a:hover {
             background-color: #CBD0C0;
-            border-radius: 4px;
         }
         .content {
             flex-grow: 1;
             padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .header {
             text-align: center;
@@ -53,23 +54,21 @@
             margin-bottom: 10px;
         }
         .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            max-width: 100%;
+            width: 100%;
         }
         .gallery-item {
+            width: 100%;
+            max-width: 800px;
             overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .gallery-item:hover {
-            transform: scale(1.05);
         }
         .gallery-item img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            height: auto;
             display: block;
         }
     </style>
@@ -88,28 +87,13 @@
         <div class="content">
             <div class="header">
                 <h1>Our Photo Gallery</h1>
-                <p>subtlte!</p>
             </div>
             <div class="gallery">
                 <!-- Replace the src attributes with your actual image paths -->
                 <div class="gallery-item">
-                    <img src="/api/placeholder/200/200" alt="Sophie and Kyle 1">
+                    <img src="us.jpg" alt="Sophie and Kyle">
                 </div>
-                <div class="gallery-item">
-                    <img src="/api/placeholder/200/200" alt="Sophie and Kyle 2">
-                </div>
-                <div class="gallery-item">
-                    <img src="/api/placeholder/200/200" alt="Sophie and Kyle 3">
-                </div>
-                <div class="gallery-item">
-                    <img src="/api/placeholder/200/200" alt="Sophie and Kyle 4">
-                </div>
-                <div class="gallery-item">
-                    <img src="/api/placeholder/200/200" alt="Sophie and Kyle 5">
-                </div>
-                <div class="gallery-item">
-                    <img src="/api/placeholder/200/200" alt="Sophie and Kyle 6">
-                </div>
+
                 <!-- Add more gallery items as needed -->
             </div>
         </div>
