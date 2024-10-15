@@ -3,40 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lodging Information - Sophie and Kyle's Wedding</title>
+    <title>Travel Information - Sophie and Kyle's Wedding</title>
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
             background-color: #fffff7;
-            color: #5A5C55;
+            color: #3e3e3e;
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
         .container {
             display: flex;
+            flex-direction: column;
             min-height: 100vh;
         }
-        .sidebar {
-            flex: 0 0 200px;
+        .navbar {
             background-color: #E2E8D6;
-            padding: 30px 20px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
-        .sidebar h2 {
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-size: 1.5em;
+        .navbar h1 {
+            margin: 0 0 15px 0;
+            font-size: 2em;
         }
-        .sidebar a {
-            display: block;
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .navbar a {
             padding: 10px;
-            margin: 10px 0;
-            color: #5A5C55;
+            color: #3e3e3e;
             text-decoration: none;
             transition: background-color 0.3s;
+            white-space: nowrap;
         }
-        .sidebar a:hover {
+        .navbar a:hover {
             background-color: #CBD0C0;
             border-radius: 4px;
         }
@@ -50,18 +55,13 @@
             text-align: center;
             margin-bottom: 30px;
         }
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+        .header h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
         }
         .main-content {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-        .lodging-details {
-            flex: 2;
-            padding-right: 40px;
+            flex-direction: column;
         }
         .lodging-section {
             margin-bottom: 30px;
@@ -72,34 +72,32 @@
             border-bottom: 1px solid #CBD0C0;
             padding-bottom: 5px;
         }
-        .lodging-section p {
+        .lodging-section p, .lodging-section ul {
             margin: 5px 0;
         }
-        .photo-column {
-            flex: 1;
-        }
-        .photo-column img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="sidebar">
-            <h2>Navigation</h2>
-            <a href="index.html">Home</a>
-            <a href="lodging.html">Travel</a>
-            <a href="faq.html">Answers</a>
-            <a href="registry.html">Registry</a>
-            <a href="rsvp.html">RSVP</a>
-            <a href="gallery.html">Photos</a>
-        </div>
+        <nav class="navbar">
+            <h1>Sophie and Kyle's Wedding</h1>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="lodging.html">Travel</a>
+                <a href="faq.html">Answers</a>
+                <a href="registry.html">Registry</a>
+                <a href="rsvp.html">RSVP</a>
+                <a href="gallery.html">Photos</a>
+            </div>
+        </nav>
         <div class="content">
             <div class="header">
-                <h1>Travel Information</h1>
+                <h2>Travel Information</h2>
             </div>
             <div class="main-content">
                 <div class="lodging-details">
@@ -109,8 +107,7 @@
                         <p><strong>Townsend Manor</strong></p>
                         <p>714 Main St Greenport, NY, 11944</p>
                         <p><a href="https://www.townsendinn.com/">Hotel Website</a></p>
-                        <p><i><strong>Rooms will be available to book under the block starting January 1st, more details to come.</strong></i></p>
-
+                        <p><em>Rooms will be available to book under the block starting January 1st, more details to come.</em></p>
                     </div>
                     <div class="lodging-section">
                         <h3>Alternative Hotels</h3>
@@ -122,45 +119,42 @@
                         </ul>
                     </div>
                     <div class="lodging-section">
-                        <h2>Getting to Greenport</h2>
-                        <h3>By Ferry</h3>
+                        <h3>Getting to Greenport</h3>
+                        <h4>By Ferry</h4>
                         <p>The Cross Sound Ferry runs regularly between New London, CT and Orient Point, NY. If you are coming from upstate New York or somewhere in New England, this is the best option. Orient Point is a scenic fifteen minute drive from Greenport.</p>
                         <ul>
                             <li>Ferry operator: <a href="https://www.longislandferry.com/" target="_blank">Cross Sound Ferry</a></li>
                             <li>Duration: 1 hour 20 minutes</li>
                             <li>Reservations are recommended</li>
                         </ul>
-
-                        <h3>By Plane</h3>
-                        <p>We recommend flying into either LaGuardia or the Long Island MacArthur airport. </p>
+                        <h4>By Plane</h4>
+                        <p>We recommend flying into either LaGuardia or the Long Island MacArthur airport.</p>
                         <p>From LaGuardia, you can:</p>
                         <ul>
                             <li>Rent a car and drive to Greenport.</li>
-                            <li> <a href="https://new.mta.info/agency/long-island-rail-road">Long Island Railroad.</a></li>
+                            <li><a href="https://new.mta.info/agency/long-island-rail-road">Long Island Railroad.</a>
                                 <ul>
                                     <li>Take an uber or taxi to the Long Island Railroad Woodside stop. Take train headed towards Ronkonkoma, transfer at Ronkonkoma station for train to Greenport.</li>
-                                    <li><i>The train from Ronkonkoma to Greenport runs infrequently, so check the time table</i></li>
+                                    <li><em>The train from Ronkonkoma to Greenport runs infrequently, so check the time table</em></li>
                                 </ul>
-                            <li><a href="https://www.hamptonjitney.com/hjmobile/airports.php">Jitney Bus.</a></li>
+                            </li>
+                            <li><a href="https://www.hamptonjitney.com/hjmobile/airports.php">Jitney Bus.</a>
                                 <ul>
                                     <li>Take bus or taxi to Queens Airport Connection stop in Fresh Meadows, Queens. The Jitney stops in the center of Greenport.</li>
-                                    <li><i>The train from Ronkonkoma to Greenport runs infrequently, so check the time table</i></li>
-
                                 </ul>
+                            </li>
                         </ul>
                         <p>From Long Island MacArthur airport, you can:</p>
                         <ul>
                             <li>Rent a car and drive to Greenport.</li>
                         </ul>
-
-                        <h3>By Train from NYC</h3>
+                        <h4>By Train from NYC</h4>
                         <p>Long Island Rail Road (LIRR) from Penn Station to Greenport.</p>
                         <ul>
                             <li>Route: Take the Ronkonkoma line and transfer at Ronkonkoma for the Greenport train</li>
                             <li>Duration: About 3 hours</li>
                             <li>The Greenport station is in the center of town.</li>
                         </ul>
-
                     </div>
                 </div>
             </div>

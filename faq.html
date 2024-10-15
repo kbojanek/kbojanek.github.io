@@ -8,35 +8,40 @@
         body {
             font-family: 'Courier New', Courier, monospace;
             background-color: #fffff7;
-            color: #5A5C55;
+            color: #3e3e3e;
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
         .container {
             display: flex;
+            flex-direction: column;
             min-height: 100vh;
         }
-        .sidebar {
-            flex: 0 0 200px;
+        .navbar {
             background-color: #E2E8D6;
-            padding: 30px 20px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
-        .sidebar h2 {
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-size: 1.5em;
+        .navbar h1 {
+            margin: 0 0 15px 0;
+            font-size: 2em;
         }
-        .sidebar a {
-            display: block;
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .navbar a {
             padding: 10px;
-            margin: 10px 0;
-            color: #5A5C55;
+            color: #3e3e3e;
             text-decoration: none;
             transition: background-color 0.3s;
+            white-space: nowrap;
         }
-        .sidebar a:hover {
+        .navbar a:hover {
             background-color: #CBD0C0;
             border-radius: 4px;
         }
@@ -50,64 +55,60 @@
             text-align: center;
             margin-bottom: 30px;
         }
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+        .header h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
         }
         .main-content {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-        .faq-section {
-            flex: 2;
-            padding-right: 40px;
+            flex-direction: column;
+            max-width: 800px;
+            margin: 0 auto;
         }
         .faq-item {
             margin-bottom: 30px;
         }
         .faq-item h3 {
-            font-size: 1.2em;
+            font-size: 1.3em;
             margin-bottom: 10px;
-            color: #4A4C45;
+            border-bottom: 1px solid #CBD0C0;
+            padding-bottom: 5px;
         }
         .faq-item p {
             margin: 5px 0;
         }
-        .photo-column {
-            flex: 1;
-        }
-        .photo-column img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="sidebar">
-            <h2>Navigation</h2>
-            <a href="index.html">Home</a>
-            <a href="lodging.html">Travel</a>
-            <a href="faq.html">Answers</a>
-            <a href="registry.html">Registry</a>
-            <a href="rsvp.html">RSVP</a>
-            <a href="gallery.html">Photos</a>
-        </div>
+        <nav class="navbar">
+            <h1>Sophie and Kyle's Wedding</h1>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="lodging.html">Travel</a>
+                <a href="faq.html">Answers</a>
+                <a href="registry.html">Registry</a>
+                <a href="rsvp.html">RSVP</a>
+                <a href="gallery.html">Photos</a>
+            </div>
+        </nav>
         <div class="content">
             <div class="header">
-                <h1>Answers</h1>
+                <h2>Answers</h2>
             </div>
             <div class="main-content">
                 <div class="faq-section">
                     <div class="faq-item">
-                        <h3>What's the dress code for the wedding?</h3>
+                        <h3>What's the dress code for our wedding?</h3>
                         <p>Fun!</p>
                     </div>
                     <div class="faq-item">
-                        <h3>Are kids welcome at the wedding?</h3>
+                        <h3>Are kids welcome at our wedding?</h3>
                         <p>Yes!</p>
                     </div>
                 </div>

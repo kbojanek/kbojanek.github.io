@@ -8,35 +8,40 @@
         body {
             font-family: 'Courier New', Courier, monospace;
             background-color: #fffff7;
-            color: #5A5C55;
+            color: #3e3e3e;
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
         .container {
             display: flex;
+            flex-direction: column;
             min-height: 100vh;
         }
-        .sidebar {
-            flex: 0 0 200px;
+        .navbar {
             background-color: #E2E8D6;
-            padding: 30px 20px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
-        .sidebar h2 {
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-size: 1.5em;
+        .navbar h1 {
+            margin: 0 0 15px 0;
+            font-size: 2em;
         }
-        .sidebar a {
-            display: block;
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .navbar a {
             padding: 10px;
-            margin: 10px 0;
-            color: #5A5C55;
+            color: #3e3e3e;
             text-decoration: none;
             transition: background-color 0.3s;
+            white-space: nowrap;
         }
-        .sidebar a:hover {
+        .navbar a:hover {
             background-color: #CBD0C0;
             border-radius: 4px;
         }
@@ -51,49 +56,47 @@
         .header {
             margin-bottom: 30px;
         }
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+        .header h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
         }
         .rsvp-link {
             display: inline-block;
             background-color: #E2E8D6;
-            color: #5A5C55;
             padding: 15px 30px;
+            border-radius: 4px;
             text-decoration: none;
-            border-radius: 5px;
+            color: #3e3e3e;
             font-size: 1.2em;
-            margin-top: 20px;
             transition: background-color 0.3s;
+            margin-top: 20px;
         }
         .rsvp-link:hover {
             background-color: #CBD0C0;
         }
-        .photo-container {
-            margin-top: 40px;
-        }
-        .photo-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="sidebar">
-            <h2>Navigation</h2>
-            <a href="index.html">Home</a>
-            <a href="lodging.html">Travel</a>
-            <a href="faq.html">Answers</a>
-            <a href="registry.html">Registry</a>
-            <a href="rsvp.html">RSVP</a>
-            <a href="gallery.html">Photos</a>
-        </div>
+        <nav class="navbar">
+            <h1>Sophie and Kyle's Wedding</h1>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="lodging.html">Travel</a>
+                <a href="faq.html">Answers</a>
+                <a href="registry.html">Registry</a>
+                <a href="rsvp.html">RSVP</a>
+                <a href="gallery.html">Photos</a>
+            </div>
+        </nav>
         <div class="content">
             <div class="header">
-                <h1>RSVP</h1>
+                <h2>RSVP</h2>
                 <p>We're excited to celebrate with you! Please click the button below to RSVP for our wedding.</p>
             </div>
             <a href="https://forms.gle/zPX8ZPD5V95x85HQ8" class="rsvp-link" target="_blank">Click Here to RSVP</a>
